@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <title>Configuración - Departamento de Vinculación Social</title>
+</head>
+
+<body class="footer-spacing">
+  <header class="container-fluid sticky-top">
+    <nav class="navbar navbar-expand-lg bg-light px-lg-3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="./cursos_admin.html" class="navbar-brand d-flex align-items-center mb-0 logo-center-sm fw-semibold">
+        <img class="me-3 logo" width="40" height="40" src="../assets/logo-upta.png" alt="Logo de la UPTA">
+        <span class="d-none d-lg-inline">Vinculación Social</span>
+      </a>
+      <div class="d-flex align-items-center nav-right-wrapper">
+        <button class="nav-item btn btn-link">
+          <img width="16" src="../assets/icons/bell-fill.svg">
+        </button>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mx-2" type="button" id="userDropdownBtn" data-bs-toggle="dropdown">
+            <img width="16" height="16" class="mx-1" src="../assets/icons/person-circle.svg">
+          </a>
+          <ul class="dropdown-menu" style="left: -6rem;">
+            <li>
+              <a class="dropdown-item" href="./usuarios_admin.html" >
+                <img class="mb-1" width="16" src="../assets/icons/person-fill.svg">
+                Usuarios
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./estadistica.html" >
+                <img class="mb-1" width="16" src="../assets/icons/clipboard.svg">
+                Estadística
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./configuracion.html">
+                <img class="mb-1" width="16" src="../assets/icons/gear-fill.svg">
+                Configuración
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" href="../index.html">
+                <img class="mb-1" width="16" src="../assets/icons/box-arrow-left.svg">
+                Cerrar Sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav text-center">
+          <a href="./cursos_admin.html" class="nav-link">Cursos</a>
+          <a href="./eventos_admin.html" class="nav-link">Eventos</a>
+          <a href="./clubes_admin.html" class="nav-link">Clubes</a>
+          <a href="./pagos.html" class="nav-link">Pagos</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid px-lg-5">
+    <h1 class="mt-3 text-center">Configuración</h1>
+    <hr>
+    <div class="row mt-3">
+      <div class="col-md"></div>
+      <div class="col-md-8">
+        <h2>Base de datos</h2>
+        <p class="mb-0">Última recuperación de base de datos: <b>12-02-2022.</b></p>
+        <p>Último respaldo de base de datos: <b>05-05-2022.</b></p>
+        <div class="row gap-2">
+          <div class="col-md">
+            <button class="btn btn-success w-100">Respaldar base de datos.</button>
+          </div>
+          <div class="col-md">
+            <button class="btn btn-primary w-100">Recuperar base de datos.</button>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <section>
+          <h2 class="mb-0">Historial de pagos</h2>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle text-center mt-3">
+              <thead>
+                <tr class="table-dark">
+                  <th scope="col">Estudiante</th>
+                  <th scope="col">Teléfono</th>
+                  <th scope="col">Tipo de pago</th>
+                  <th scope="col">Monto (Bs.D.)</th>
+                  <th scope="col">Monto ($)</th>
+                  <th scope="col">Referencia</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Juan Pérez</td>
+                  <td>+241-121231513</td>
+                  <td>Transferencia</td>
+                  <td>----</td>
+                  <td>45</td>
+                  <td>12314213</td>
+                  <td>11-02-2022</td>
+                  <td>Aceptado</td>
+                </tr>
+                <tr>
+                  <td>Juan Pérez</td>
+                  <td>+241-121231513</td>
+                  <td>Transferencia</td>
+                  <td>----</td>
+                  <td>45</td>
+                  <td>12314213</td>
+                  <td>11-02-2022</td>
+                  <td>Aceptado</td>
+                </tr>
+                <tr>
+                  <td>Juan Pérez</td>
+                  <td>+241-121231513</td>
+                  <td>Transferencia</td>
+                  <td>----</td>
+                  <td>45</td>
+                  <td>12314213</td>
+                  <td>11-02-2022</td>
+                  <td>Aceptado</td>
+                </tr>
+                <tr>
+                  <td>Juan Pérez</td>
+                  <td>+241-121231513</td>
+                  <td>Transferencia</td>
+                  <td>----</td>
+                  <td>45</td>
+                  <td>12314213</td>
+                  <td>11-02-2022</td>
+                  <td>Aceptado</td>
+                </tr>
+                <tr>
+                  <td>Juan Pérez</td>
+                  <td>+241-121231513</td>
+                  <td>Transferencia</td>
+                  <td>----</td>
+                  <td>45</td>
+                  <td>12314213</td>
+                  <td>11-02-2022</td>
+                  <td>Aceptado</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <nav class="d-flex justify-content-center">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">&lt;&lt;</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">&gt;&gt;</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <div class="col-md"></div>
+    </div>
+  </main>
+  <footer
+    class="bg-dark text-white px-4 py-2 text-center w-100 shadow d-flex align-items-center justify-content-center fixed-footer">
+    <p class="m-0">Todos los derechos reservados | UPTA 2022</p>
+  </footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

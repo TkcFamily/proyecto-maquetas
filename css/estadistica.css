@@ -1,0 +1,15 @@
+.center-content {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.card-height {
+  min-height: 11rem;
+}
+
+.chart-img {
+  height: 260px;
+  width: 300px;
+  object-fit: cover;
+}

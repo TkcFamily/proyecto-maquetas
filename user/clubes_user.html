@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <title>Clubes - Departamento de Vinculación Social</title>
+</head>
+
+<body class="footer-spacing-lg">
+  <header class="container-fluid sticky-top">
+    <nav class="navbar navbar-expand-lg bg-light px-lg-3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="./cursos_user.html" class="navbar-brand d-flex align-items-center mb-0 logo-center-sm fw-semibold">
+        <img class="me-3 logo" width="40" height="40" src="../assets/logo-upta.png" alt="Logo de la UPTA">
+        <span class="d-none d-lg-inline">Vinculación Social</span>
+      </a>
+      <div class="d-flex align-items-center nav-right-wrapper">
+        <button class="nav-item btn btn-link">
+          <img width="16" src="../assets/icons/bell-fill.svg">
+        </button>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mx-2" type="button" id="userDropdownBtn" data-bs-toggle="dropdown">
+            <img width="16" height="16" class="mx-1" src="../assets/icons/person-circle.svg">
+          </a>
+          <ul class="dropdown-menu" style="left: -6rem;">
+            <li>
+              <a href="./perfil.html" class="dropdown-item" href="#">
+                <img class="mb-1" width="16" src="../assets/icons/person-fill.svg">
+                Perfil
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a href="../index.html" class="dropdown-item" href="#">
+                <img class="mb-1" width="16" src="../assets/icons/box-arrow-left.svg">
+                Cerrar Sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav text-center">
+          <a href="./cursos_user.html" class="nav-link">Cursos</a>
+          <a href="./eventos_user.html" class="nav-link">Eventos</a>
+          <a href="./clubes_user.html" class="nav-link">Clubes</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid px-lg-5">
+    <section>
+      <div class="row mt-0 mt-lg-4 align-items-center">
+        <div class="col-5">
+          <h1>Clubes</h1>
+        </div>
+        <div class="col-7 mt-1">
+          <form method="POST" class="form input-group">
+            <input class="form-control" type="search" placeholder="Buscar">
+            <a class="input-group-text" href="#">
+              <img src="../assets/icons/search.svg">
+            </a>
+          </form>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-3 mt-3 p-0 shadow">
+            <div class="row w-100 m-0">
+              <div class="col-md-3 p-0">
+                <div class="w-100 h-100">
+                  <img src="../assets/sample2.jpg" class="img-cover h-100 w-100 rounded" alt="Imagen del club">
+                </div>
+              </div>
+              <div class="card-body col-md-9 p-3 d-flex flex-column justify-content-between">
+                <div class="d-flex flex-column">
+                  <h2 class="card-title mb-1">Club de Fútbol</h2>
+                  <h6 class="card-subtitle text-muted">Entr. Ignacio Rojas</h6>
+                </div>
+                <p class="card-text description fw-normal lead fs-6 mt-2 m-0">Es una entidad deportiva que tiene como
+                  único fin la práctica del fútbol.</p>
+                <span class="text-muted fs-6 mt-2">Martes de 9:00 AM a 10:00 AM</span>
+                <div class="d-flex gap-3">
+                  <a href="#" class="btn btn-primary mt-3 w-50">Detalles</a>
+                  <a href="#" class="btn btn-success mt-3 w-50">Inscribirse</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card mb-3 mt-3 p-0 shadow">
+            <div class="row w-100 m-0">
+              <div class="col-md-3 p-0">
+                <img src="../assets/sample1.jpg" class="img-cover h-100 w-100 rounded" alt="Imagen del club">
+              </div>
+              <div class="card-body col-md-9 p-3 d-flex flex-column justify-content-between">
+                <div class="d-flex flex-column">
+                  <h2 class="card-title mb-1">Club de Basquet</h2>
+                  <h6 class="card-subtitle text-muted">Entr. Ignacio Rojas</h6>
+                </div>
+                <p class="card-text description fw-normal lead fs-6 mt-2 m-0">Es una entidad deportiva que tiene como
+                  fin la práctica del basquet.</p>
+                <span class="text-muted fs-6 mt-2">Lunes de 9:00 AM a 10:00 AM</span>
+                <div class="d-flex gap-3">
+                  <a href="#" class="btn btn-primary mt-3 w-50">Detalles</a>
+                  <a href="#" class="btn btn-danger mt-3 w-50">Retirarse</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer
+    class="bg-dark text-white px-4 py-2 text-center w-100 shadow d-flex align-items-center justify-content-center fixed-footer-lg">
+    <p class="m-0">Todos los derechos reservados | UPTA 2022</p>
+  </footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

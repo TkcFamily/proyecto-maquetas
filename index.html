@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="screen-width=device-width initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/layout_bg_upta.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <title>Login</title>
+</head>
+
+<body class="footer-spacing-lg">
+  <div class="overlay"></div>
+  <main class="d-flex flex-column justify-content-center align-items-center pb-2 mb-5">
+    <div class="bg-white rounded-circle logo-container my-2 shadow">
+      <img width="70" height="70" src="./assets/logo-upta.png">
+    </div>
+    <h1 class="mb-4 title-shadow text-center text-white">Iniciar sesión</h1>
+    <div class="card shadow-lg form-container">
+      <div class="card-body">
+        <form method="POST" class="form">
+          <div class="mb-3">
+            <label class="form-label fw-semibold" for="nameInput">Nombre de usuario: </label>
+            <input class="form-control py-2" id="nameInput" type="text" name="name" placeholder="Username...">
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold" for="passwordInput">Contraseña: </label>
+            <input class="form-control py-2" id="passwordInput" type="password" name="password"
+              placeholder="Password...">
+          </div>
+          <input onclick="fakeLogin()" class="btn btn-primary btn-lg w-100 mt-2 mb-3" type="button" name="submit"
+            value="Aceptar">
+          <a class="text-decoration-none d-block text-center" onclick="notImplementedMsg()">¿Olvidaste tu
+            contraseña?</a>
+          <hr>
+          <a class="btn btn-outline-success d-block mt-4 fw-bold" href="./registro.html">¿No tienes cuenta?
+            Regístrate</a>
+        </form>
+      </div>
+  </main>
+  <footer
+    class="bg-dark text-white px-4 py-2 text-center w-100 shadow d-flex align-items-center justify-content-center fixed-footer-lg">
+    <p class="m-0">Todos los derechos reservados | UPTA 2022</p>
+  </footer>
+  <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/fakeLogin.js"></script>
+</body>
+
+</html

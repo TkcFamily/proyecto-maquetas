@@ -1,0 +1,98 @@
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+
+.clubs-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+
+.course-card {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.176);
+}
+
+.club-card {
+  flex-direction: row;
+  width: 100%;
+}
+
+.course-status {
+  font-size: 0.85rem;
+  bottom: 0.8rem;
+  right: 0.8rem;
+}
+
+.course-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.club-card img {
+  height: 100%;
+}
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.round-bl {
+  border-radius: 0 0 0 5px;
+}
+
+.round-br {
+  border-radius: 0 0 5px 0 !important;
+}
+
+aside {
+  position: sticky;
+  top: 5rem;
+}
+
+@media screen and (max-width: 575px) {
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); 
+  }
+
+  .personal-grid {
+    display: flex;
+  }
+
+  .round-bl {
+    border-radius: 0;
+  }
+  
+  .round-br {
+    border-radius: 0 0 5px 5px !important;
+  }
+
+  .club-card {
+    flex-direction: column;
+  }
+
+  .club-card img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .title {
+    text-align: center;
+  }
+  
+  img[alt="Foto de perfil"] {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .clubs-grid {
+    display: block;
+  }
+}

@@ -1,0 +1,17 @@
+.logo-center-sm {
+  position: absolute;
+  left: calc(50% - 20px);
+  top: 0;
+}
+
+@media (min-width: 992px) {
+  .logo-center-sm {
+    position: static;
+  }
+
+  .nav-right-wrapper {
+    position: absolute;
+    right: 1rem;
+    max-width: 25%;
+  }
+}

@@ -1,0 +1,50 @@
+<div class="col-lg" id="filters">
+  <aside class="container-fluid">
+    <div class="w-100" id="filters">
+      <div class="row gap-lg-3 w-100 m-0">
+        <div class="mb-3 mb-lg-0">
+          <h5>Filtros: </h5>
+          <div class="mb-1">
+            <p class="mb-2 fw-semibold" for="role">Por tipo de pago: </p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pay-type" id="pago-movil">
+              <label class="form-check-label" for="pago-movil">Pago Móvil</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pay-type" id="transfer">
+              <label class="form-check-label" for="transfer">Transferencia</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pay-type" id="transfer">
+              <label class="form-check-label" for="transfer">Efectivo (Bs.D.)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pay-type" id="transfer">
+              <label class="form-check-label" for="transfer">Efectivo ($)</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="m-0 pb-3">Ordenar por:</h5>
+            <select class="form-select form-select-sm sorting-size" name="sort-direction" id="sortDirection">
+              <option value="ascending">Ascendente</option>
+              <option value="descending">Descendiente</option>
+            </select>
+          </div>
+          <div class="d-flex flex-wrap d-md-block">
+            <div class="form-check me-3">
+              <input class="form-check-input" type="radio" name="sort" id="date">
+              <label class="form-check-label me-1 me-md-3" for="date">Fecha</label>
+            </div>
+            <div class="form-check me-3">
+              <input class="form-check-input" type="radio" name="sort" id="amount">
+              <label class="form-check-label me-1 me-md-3" for="amount">Monto</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </aside>
+</div>

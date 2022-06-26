@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/cursos_admin.css">
+  <title>Cursos - Departamento de Vinculación Social</title>
+</head>
+
+<body class="footer-spacing">
+  <header class="container-fluid sticky-top">
+    <nav class="navbar navbar-expand-lg bg-light px-lg-3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="./cursos_admin.html" class="navbar-brand d-flex align-items-center mb-0 logo-center-sm fw-semibold">
+        <img class="me-3 logo" width="40" height="40" src="../assets/logo-upta.png" alt="Logo de la UPTA">
+        <span class="d-none d-lg-inline">Vinculación Social</span>
+      </a>
+      <div class="d-flex align-items-center nav-right-wrapper">
+        <button class="nav-item btn btn-link">
+          <img width="16" src="../assets/icons/bell-fill.svg">
+        </button>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mx-2" type="button" id="userDropdownBtn" data-bs-toggle="dropdown">
+            <img width="16" height="16" class="mx-1" src="../assets/icons/person-circle.svg">
+          </a>
+          <ul class="dropdown-menu" style="left: -6rem;">
+            <li>
+              <a class="dropdown-item" href="./usuarios_admin.html" >
+                <img class="mb-1" width="16" src="../assets/icons/person-fill.svg">
+                Usuarios
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./estadistica.html" >
+                <img class="mb-1" width="16" src="../assets/icons/clipboard.svg">
+                Estadística
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./configuracion.html">
+                <img class="mb-1" width="16" src="../assets/icons/gear-fill.svg">
+                Configuración
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" href="../index.html">
+                <img class="mb-1" width="16" src="../assets/icons/box-arrow-left.svg">
+                Cerrar Sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav text-center">
+          <a href="./cursos_admin.html" class="nav-link">Cursos</a>
+          <a href="./eventos_admin.html" class="nav-link">Eventos</a>
+          <a href="./clubes_admin.html" class="nav-link">Clubes</a>
+          <a href="./pagos.html" class="nav-link">Pagos</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid px-lg-5">
+    <section class="mt-3 d-flex flex-wrap justify-content-between align-items-center">
+      <h1>Cursos</h1>
+      <div class="d-flex align-items-center justify-content-around order-md-last gap-2">
+        <button class="btn btn-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#filters">
+          <img class="pb-1" src="../assets/icons/sliders-light.svg">
+          Filtros
+        </button>
+        <a class="btn btn-success fw-bold" type="button" href="./registro_curso.html">
+          <img class="pb-1" src="../assets/icons/plus-light.svg">
+          Nuevo Curso
+        </a>
+      </div>
+      <form method="POST" class="form input-group course-search mt-2 mt-md-0">
+        <input class="form-control" type="search" placeholder="Buscar">
+        <button class="btn btn-secondary input-group-text" type="submit">
+          <img src="../assets/icons/search-light.svg" />
+        </button>
+      </form>
+    </section>
+    <section class="container-fluid">
+      <div class="collapse w-100" id="filters">
+        <hr>
+        <div class="row gap-lg-5 w-100 m-0">
+          <div class="col-lg mb-4 mb-lg-0">
+            <label class="form-label fs-5 fw-semibold" for="pnf">Filtrar por PNF</label>
+            <select class="form-select" name="pnf" id="pnf">
+              <option selected>Seleccionar...</option>
+              <option value="informatica">Informática</option>
+              <option value="mecanica">Mecánica</option>
+              <option value="contaduria">Contaduría</option>
+              <option value="electricidad">Electricidad</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+          <div class="col-lg">
+            <div class="d-flex justify-content-between align-items-center">
+              <select class="form-select w-50" name="sort-direction" id="sortDirection">
+                <option value="ascending">Ascendente</option>
+                <option value="descending">Descendiente</option>
+              </select>
+            </div>
+            <div class="d-flex">
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="sort" id="price">
+                <label class="form-check-label fw-semibold me-3" for="price">Precio </label>
+              </div>
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="sort" id="duration">
+                <label class="form-check-label fw-semibold me-3" for="duration">Duración </label>
+              </div>
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="sort" id="date">
+                <label class="form-check-label fw-semibold me-3" for="date">Fecha </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle text-center mt-3">
+          <thead>
+            <tr class="table-dark">
+              <th scope="col">Código</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Instructor</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Matrícula</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#2J92SS</td>
+              <td>Desarrollo Web</td>
+              <td>Ing. Jackson</td>
+              <td>$45</td>
+              <td>15/20</td>
+              <td>12-07-2022 al 12-08-2022</td>
+              <td>Activo</td>
+              <td>
+                <button class="btn btn-sm btn-primary position-relative">
+                  <a onclick="notImplementedMsg()" class="stretched-link text-white text-decoration-none">Detalles</a>
+                </button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">
+                  Editar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>#2J92SS</td>
+              <td>Desarrollo Web</td>
+              <td>Ing. Jackson</td>
+              <td>$45</td>
+              <td>15/20</td>
+              <td>12-07-2022 al 12-08-2022</td>
+              <td>Activo</td>
+              <td>
+                <button class="btn btn-sm btn-primary position-relative">
+                  <a onclick="notImplementedMsg()" class="stretched-link text-white text-decoration-none">Detalles</a>
+                </button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">
+                  Editar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>#2J92SS</td>
+              <td>Desarrollo Web</td>
+              <td>Ing. Jackson</td>
+              <td>$45</td>
+              <td>15/20</td>
+              <td>12-07-2022 al 12-08-2022</td>
+              <td>Activo</td>
+              <td>
+                <button class="btn btn-sm btn-primary position-relative">
+                  <a onclick="notImplementedMsg()" class="stretched-link text-white text-decoration-none">Detalles</a>
+                </button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">
+                  Editar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>#2J92SS</td>
+              <td>Desarrollo Web</td>
+              <td>Ing. Jackson</td>
+              <td>$45</td>
+              <td>15/20</td>
+              <td>12-07-2022 al 12-08-2022</td>
+              <td>Activo</td>
+              <td>
+                <button class="btn btn-sm btn-primary position-relative">
+                  <a onclick="notImplementedMsg()" class="stretched-link text-white text-decoration-none">Detalles</a>
+                </button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">
+                  Editar
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>#2J92SS</td>
+              <td>Desarrollo Web</td>
+              <td>Ing. Jackson</td>
+              <td>$45</td>
+              <td>15/20</td>
+              <td>12-07-2022 al 12-08-2022</td>
+              <td>Activo</td>
+              <td>
+                <button class="btn btn-sm btn-primary position-relative">
+                  <a onclick="notImplementedMsg()" class="stretched-link text-white text-decoration-none">Detalles</a>
+                </button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">
+                  Editar
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer
+    class="bg-dark text-white px-4 py-2 text-center w-100 shadow d-flex align-items-center justify-content-center fixed-footer">
+    <p class="m-0">Todos los derechos reservados | UPTA 2022</p>
+  </footer>
+  <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

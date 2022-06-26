@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="screen-width=device-width initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/layout_bg_upta.css">
+  <link rel="stylesheet" href="./css/registro.css">
+  <title>Registro</title>
+</head>
+
+<body class="footer-spacing-lg">
+  <div class="overlay"></div>
+  <main class="d-flex flex-column justify-content-center align-items-center container-fluid">
+    <div class="bg-white rounded-circle logo-container my-2 shadow">
+      <img width="70" height="70" src="./assets/logo-upta.png">
+    </div>
+    <h1 class="mb-4 title-shadow h1 text-center text-white">Registro de Usuario</h1>
+    <form class="bg-white card align-self-center w-lg-50 shadow-lg" method="POST" action=" ">
+      <div class="card-body">
+        <h2>Datos de usuario</h2>
+        <p class="small text-muted"><i>Los campos marcados con <img class="mb-1" width="8"
+              src="./assets/icons/asterisk.svg">
+            son obligatorios</i></p>
+        <div class="row">
+          <div class="mb-3 col-lg">
+            <label class="form-label fw-semibold" for="username"><img class="mb-1" width="8"
+                src="./assets/icons/asterisk.svg">
+              Nombre de Usuario: </label>
+            <input class="form-control" type="text" id="username" name="username" placeholder="Ej. tkcfamily" />
+          </div>
+          <div class="mb-3 col-lg position-relative">
+            <label class="form-label fw-semibold" for="password"><img class="mb-1" width="8"
+                src="./assets/icons/asterisk.svg">
+              Contraseña: </label>
+            <input class="form-control" type="password" id="password" name="password" placeholder="********" />
+            <span data-bs-toggle="tooltip"
+              title="La contraseña debe tener entre 8 y 20 caracteres, y debe ser una combinación de mayúsculas, minúsculas, números y símbolos."
+              class="badge bg-primary help-pass">?</span>
+          </div>
+        </div>
+        <hr>
+        <h2>Datos personales</h2>
+        <div class="row">
+          <div class="mb-3 col-lg">
+            <label class="form-label fw-semibold" for="name"><img class="mb-1" width="8"
+                src="./assets/icons/asterisk.svg">
+              Nombres: </label>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Ej. Esteban Andrés" />
+          </div>
+          <div class="mb-3 col-lg">
+            <label class="form-label fw-semibold" for="lastname"><img class="mb-1" width="8"
+                src="./assets/icons/asterisk.svg"> Apellidos: </label>
+            <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Ej. Florez Hernández" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col-lg">
+            <label class="form-label fw-semibold" for="birth"><img class="mb-1" width="8"
+                src="./assets/icons/asterisk.svg">
+              Fecha de Nacimiento: </label>
+            <input class="form-control" type="date" />
+          </div>
+          <div class="mb-3 col-lg">
+            <label class="form-label fw-semibold" for="gender"><img class="mb-1" width="8"
+                src="./assets/icons/asterisk.svg">
+              Sexo: </label>
+            <select class="form-select" name="gender" id="gender">
+              <option selected>Seleccionar</option>
+              <option value="male">Hombre</option>
+              <option value="female">Mujer</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col-lg">
+            <label class="form-label fw-semibold" for="ci"><img class="mb-1" width="8"
+                src="./assets/icons/asterisk.svg">
+              Cédula de Identidad: </label>
+            <div class="d-flex input-group">
+              <select class="form-select ci-select input-group-text text-start" name="ci-type" id="ciType">
+                <option value="V">V-</option>
+                <option value="E">E-</option>
+              </select>
+              <input class="form-control" type="number" id="ci" name="ci" placeholder="Ej. 12.345.678"
+                style="width: 70%" />
+            </div>
+          </div>
+          <div class="mb-3 col-lg">
+            <label class="form-label fw-semibold" for="email"><img class="mb-1" width="8"
+                src="./assets/icons/asterisk.svg">
+              Correo Electrónico: </label>
+            <input class="form-control" type="text" id="email" name="email" placeholder="Ej. correo@ejemplo.com" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col-lg">
+            <label class="form-label fw-semibold" for="phone"><img class="mb-1" width="8"
+                src="./assets/icons/asterisk.svg">
+              Número de Teléfono: </label>
+            <input class="form-control" type="number" id="phone" name="phone" placeholder="Ej. 0415-1234567" />
+          </div>
+          <div class="mb-3 col-lg">
+            <label class="form-label fw-semibold" for="grade"><img class="mb-1" width="8"
+                src="./assets/icons/asterisk.svg">
+              Grado de Instrucción: </label>
+            <select class="form-select" name="grade" id="grade">
+              <option selected>Seleccionar</option>
+              <option value="basic">Primaria</option>
+              <option value="middle">Bachillerato</option>
+              <option value="tsu">TSU</option>
+              <option value="pregrade">Pregrado</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="form-label fw-semibold" for="direction"><img class="mb-1" width="8"
+              src="./assets/icons/asterisk.svg">
+            Dirección: </label>
+          <textarea class="form-control" name="direction" id="direction" rows="2"
+            placeholder="Ej. Calle Principal, Sector 18." maxlength="100"></textarea>
+        </div>
+      </div>
+      <a href="./index.html" class="btn btn-success btn-lg mx-3 mb-3" value="Aceptar">Aceptar</a>
+    </form>
+  </main>
+  <footer
+    class="bg-dark text-white px-4 py-2 text-center w-100 shadow d-flex align-items-center justify-content-center fixed-footer-lg">
+    <p class="m-0">Todos los derechos reservados | UPTA 2022</p>
+  </footer>
+  <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/enableTooltips.js"></script>
+</body>
+
+</html

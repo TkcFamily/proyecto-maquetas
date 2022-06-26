@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/estadistica.css">
+  <!-- JS para Gráficas -->
+  <script src="../js/chart.min.js"></script>
+  <title>Gráficas y estadísticas - Departamento de Vinculación Social</title>
+</head>
+
+<body class="footer-spacing-lg">
+  <header class="container-fluid sticky-top">
+    <nav class="navbar navbar-expand-lg bg-light px-lg-3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="./cursos_admin.html" class="navbar-brand d-flex align-items-center mb-0 logo-center-sm fw-semibold">
+        <img class="me-3 logo" width="40" height="40" src="../assets/logo-upta.png" alt="Logo de la UPTA">
+        <span class="d-none d-lg-inline">Vinculación Social</span>
+      </a>
+      <div class="d-flex align-items-center nav-right-wrapper">
+        <button class="nav-item btn btn-link">
+          <img width="16" src="../assets/icons/bell-fill.svg">
+        </button>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mx-2" type="button" id="userDropdownBtn" data-bs-toggle="dropdown">
+            <img width="16" height="16" class="mx-1" src="../assets/icons/person-circle.svg">
+          </a>
+          <ul class="dropdown-menu" style="left: -6rem;">
+            <li>
+              <a class="dropdown-item" href="./usuarios_admin.html" >
+                <img class="mb-1" width="16" src="../assets/icons/person-fill.svg">
+                Usuarios
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./estadistica.html" >
+                <img class="mb-1" width="16" src="../assets/icons/clipboard.svg">
+                Estadística
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./configuracion.html">
+                <img class="mb-1" width="16" src="../assets/icons/gear-fill.svg">
+                Configuración
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" href="../index.html">
+                <img class="mb-1" width="16" src="../assets/icons/box-arrow-left.svg">
+                Cerrar Sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav text-center">
+          <a href="./cursos_admin.html" class="nav-link">Cursos</a>
+          <a href="./eventos_admin.html" class="nav-link">Eventos</a>
+          <a href="./clubes_admin.html" class="nav-link">Clubes</a>
+          <a href="./pagos.html" class="nav-link">Pagos</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid px-lg-5">
+    <h1 class="mt-3">Estadística</h1>
+    <hr>
+    <h2>Estadísticas generales:</h2>
+    <div class="row gap-3 gap-lg-0 mt-3 mb-3">
+      <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column">
+        <div class="card text-bg-primary w-100 card-height text-center">
+          <div class="card-body center-content">
+            <h2 class="display-4 m-0 fw-semibold">1530$</h2>
+            <p class="lead mb-0 fs-5 fw-semibold">Ingresos totales por cursos</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column">
+        <div class="card text-bg-success w-100 card-height text-center">
+          <div class="card-body center-content">
+            <h2 class="display-4 m-0 fw-semibold">40%</h2>
+            <p class="lead mb-0 fs-5 fw-semibold">Porcentaje de usuarios inscritos en algún curso</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column">
+        <div class="card text-bg-danger w-100 card-height text-center">
+          <div class="card-body center-content">
+            <h2 class="display-4 m-0 fw-semibold">40</h2>
+            <p class="lead mb-0 fs-5 fw-semibold">Total de usuarios inscritos en algún curso</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h2 class="mt-3">Gráficas generales:</h2>
+    <div class="row mt-3">
+      <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column mb-5 mb-lg-0">
+        <canvas id="usersMonth" width="300" height="200"></canvas>
+        <script>
+          const ctx = document.getElementById('usersMonth').getContext('2d');
+          const usersMonthChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+              datasets: [{
+                label: 'Estudiantes inscritos por mes',
+                data: [30, 52, 25, 64, 21, 12, 32, 15, 46, 41, 36, 27],
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.8)',
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column mb-5 mb-lg-0">
+        <canvas id="moneyPerCourse" width="300" height="200"></canvas>
+        <script>
+          const ctx2 = document.getElementById('moneyPerCourse').getContext('2d');
+          const moneyPerCourseChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+              labels: ['Programación Web', 'Diseño Gráfico', 'Reparación de Teléfonos', 'Inglés', 'Mecánica'],
+              datasets: [{
+                label: 'Ingresos por curso',
+                data: [540, 160, 100, 330, 400],
+                backgroundColor: [
+                  'rgba(99, 255, 132, 0.8)',
+                ],
+                borderColor: [
+                  'rgba(99, 255, 132, 1)',
+                ],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column mb-5 mb-lg-0">
+        <canvas id="mostBoughtCourse" width="300" height="200"></canvas>
+        <script>
+          const ctx3 = document.getElementById('mostBoughtCourse').getContext('2d');
+          const mostBoughtCourseChart = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+              labels: ['Programación Web', 'Diseño Gráfico', 'Reparación de Teléfonos', 'Inglés', 'Mecánica'],
+              datasets: [{
+                label: 'Estudiantes inscritos por curso',
+                data: [12, 4, 5, 11, 8],
+                backgroundColor: [
+                  'rgba(99, 255, 132, 0.8)',
+                ],
+                borderColor: [
+                  'rgba(99, 255, 132, 1)',
+                ],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="bg-dark text-white px-4 py-2 text-center w-100 shadow d-flex align-items-center justify-content-center fixed-footer-lg">
+    <p class="m-0">Todos los derechos reservados | UPTA 2022</p>
+  </footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

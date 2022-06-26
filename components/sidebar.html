@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="menu_admin.css">
+	<title>Sidebar</title>
+</head>
+<body>
+	<div class="d-block d-lg-none">
+		<button class="btn btn-primary text-center" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-controls="sidebar">
+			<img src="../assets/gear.svg">
+		</button>
+	</div>
+
+	<main>
+		<div class="collapse show collapse-horizontal" id="sidebar">	
+			<aside class="bg-dark container-fluid">
+	        	<nav class="nav flex-column nav-pills text-center" aria-orientation="vertical">
+					<a href="#" class="nav-link m-2 text-white disabled" aria-selected="true">Cursos</a>
+					<a href="#" class="nav-link m-2 text-white">Eventos</a>
+					<a href="#" class="nav-link m-2 text-white">Clubes</a>
+					<a href="#" class="nav-link m-2 text-white">Estadística</a>
+				</nav>						
+			</aside>
+		</div>
+	</main>
+
+	
+	<script type="text/javascript" src="bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

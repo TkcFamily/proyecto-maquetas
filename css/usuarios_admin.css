@@ -1,0 +1,8 @@
+aside {
+  position: sticky;
+  top: 5rem;
+}
+
+.sorting-size {
+  width: 40%;
+}

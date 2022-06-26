@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <title>Configuración - Departamento de Vinculación Social</title>
+</head>
+
+<body class="footer-spacing-lg">
+  <header class="container-fluid sticky-top">
+    <nav class="navbar navbar-expand-lg bg-light px-lg-3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="./cursos_admin.html" class="navbar-brand d-flex align-items-center mb-0 logo-center-sm fw-semibold">
+        <img class="me-3 logo" width="40" height="40" src="../assets/logo-upta.png" alt="Logo de la UPTA">
+        <span class="d-none d-lg-inline">Vinculación Social</span>
+      </a>
+      <div class="d-flex align-items-center nav-right-wrapper">
+        <button class="nav-item btn btn-link">
+          <img width="16" src="../assets/icons/bell-fill.svg">
+        </button>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mx-2" type="button" id="userDropdownBtn" data-bs-toggle="dropdown">
+            <img width="16" height="16" class="mx-1" src="../assets/icons/person-circle.svg">
+          </a>
+          <ul class="dropdown-menu" style="left: -6rem;">
+            <li>
+              <a class="dropdown-item" href="./usuarios_admin.html" >
+                <img class="mb-1" width="16" src="../assets/icons/person-fill.svg">
+                Usuarios
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./estadistica.html" >
+                <img class="mb-1" width="16" src="../assets/icons/clipboard.svg">
+                Estadística
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./configuracion.html">
+                <img class="mb-1" width="16" src="../assets/icons/gear-fill.svg">
+                Configuración
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" href="../index.html">
+                <img class="mb-1" width="16" src="../assets/icons/box-arrow-left.svg">
+                Cerrar Sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav text-center">
+          <a href="./cursos_admin.html" class="nav-link">Cursos</a>
+          <a href="./eventos_admin.html" class="nav-link">Eventos</a>
+          <a href="./clubes_admin.html" class="nav-link">Clubes</a>
+          <a href="./pagos.html" class="nav-link">Pagos</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-fluid px-lg-5">
+    <section class="mt-3 d-flex flex-wrap justify-content-between align-items-center">
+      <h1>Usuarios</h1>
+      <div class="d-flex align-items-center justify-content-around order-md-last gap-2">
+        <button class="btn btn-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#filters">
+          <img class="pb-1" src="../assets/icons/sliders-light.svg">
+          <span class="d-none d-lg-inline">Filtros</span>
+        </button>
+        <button class="btn btn-success fw-bold" type="button">
+          <img class="pb-1" src="../assets/icons/plus-light.svg">
+          <span class="d-none d-lg-inline">Nuevo Usuario</span>
+        </button>
+      </div>
+      <form class="form input-group course-search mt-2 mt-md-0">
+        <input class="form-control" type="search" placeholder="Buscar">
+        <button class="btn btn-secondary input-group-text" type="submit">
+          <img src="../assets/icons/search-light.svg" />
+        </button>
+      </form>
+    </section>
+    <section class="container-fluid">
+      <div class="collapse w-100" id="filters">
+        <hr>
+        <div class="row gap-lg-5 w-100 m-0">
+          <div class="col-md mb-3 mb-lg-0">
+            <h5>Filtros: </h5>
+            <div class="mb-1">
+              <p class="mb-2 fw-semibold" for="role">Por rol: </p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="role" id="students">
+                <label class="form-check-label" for="students">Estudiantes</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="role" id="instructors">
+                <label class="form-check-label" for="instructors">Instructores</label>
+              </div>
+            </div>
+            <div class="mb-1">
+              <p class="mb-2 fw-semibold" for="role">Por sexo: </p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="role" id="male">
+                <label class="form-check-label" for="students">Masculino</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="role" id="instructors">
+                <label class="form-check-label" for="instructors">Femenino</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="m-0 pb-3">Ordenar por:</h5>
+              <select class="form-select form-select-sm sorting-size" name="sort-direction" id="sortDirection">
+                <option value="ascending">Ascendente</option>
+                <option value="descending">Descendiente</option>
+              </select>
+            </div>
+            <div class="d-flex flex-wrap d-md-block">
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="sort" id="id">
+                <label class="form-check-label me-1 me-md-3" for="id">ID</label>
+              </div>
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="sort" id="name">
+                <label class="form-check-label me-1 me-md-3" for="name">Nombre</label>
+              </div>
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="sort" id="lastname">
+                <label class="form-check-label me-1 me-md-3" for="lastname">Apellido</label>
+              </div>
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="sort" id="age">
+                <label class="form-check-label me-1 me-md-3" for="age">Edad</label>
+              </div>
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="sort" id="ci">
+                <label class="form-check-label me-1 me-md-3" for="ci">Cedula</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle text-center mt-3">
+          <thead>
+            <tr class="table-dark">
+              <th scope="col">ID</th>
+              <th scope="col">Nombres</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">Cédula</th>
+              <th scope="col">Rol</th>
+              <th scope="col">Sexo</th>
+              <th scope="col">¿En UPTA?</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#0001</td>
+              <td>Juan Eduardo</td>
+              <td>Pérez González</td>
+              <td>V-12.345.678</td>
+              <td>Estudiante</td>
+              <td>Masculino</td>
+              <td>Si</td>
+              <td>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-primary">Detalles</button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#0001</td>
+              <td>Juan Eduardo</td>
+              <td>Pérez González</td>
+              <td>V-12.345.678</td>
+              <td>Estudiante</td>
+              <td>Masculino</td>
+              <td>Si</td>
+              <td>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-primary">Detalles</button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#0001</td>
+              <td>Juan Eduardo</td>
+              <td>Pérez González</td>
+              <td>V-12.345.678</td>
+              <td>Estudiante</td>
+              <td>Masculino</td>
+              <td>Si</td>
+              <td>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-primary">Detalles</button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#0001</td>
+              <td>Juan Eduardo</td>
+              <td>Pérez González</td>
+              <td>V-12.345.678</td>
+              <td>Estudiante</td>
+              <td>Masculino</td>
+              <td>Si</td>
+              <td>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-primary">Detalles</button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#0001</td>
+              <td>Juan Eduardo</td>
+              <td>Pérez González</td>
+              <td>V-12.345.678</td>
+              <td>Estudiante</td>
+              <td>Masculino</td>
+              <td>Si</td>
+              <td>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-primary">Detalles</button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#0001</td>
+              <td>Juan Eduardo</td>
+              <td>Pérez González</td>
+              <td>V-12.345.678</td>
+              <td>Estudiante</td>
+              <td>Masculino</td>
+              <td>Si</td>
+              <td>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-primary">Detalles</button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#0001</td>
+              <td>Juan Eduardo</td>
+              <td>Pérez González</td>
+              <td>V-12.345.678</td>
+              <td>Estudiante</td>
+              <td>Masculino</td>
+              <td>Si</td>
+              <td>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-primary">Detalles</button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#0001</td>
+              <td>Juan Eduardo</td>
+              <td>Pérez González</td>
+              <td>V-12.345.678</td>
+              <td>Estudiante</td>
+              <td>Masculino</td>
+              <td>Si</td>
+              <td>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-primary">Detalles</button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#0001</td>
+              <td>Juan Eduardo</td>
+              <td>Pérez González</td>
+              <td>V-12.345.678</td>
+              <td>Estudiante</td>
+              <td>Masculino</td>
+              <td>Si</td>
+              <td>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-primary">Detalles</button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#0001</td>
+              <td>Juan Eduardo</td>
+              <td>Pérez González</td>
+              <td>V-12.345.678</td>
+              <td>Estudiante</td>
+              <td>Masculino</td>
+              <td>Si</td>
+              <td>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-primary">Detalles</button>
+                <button onclick="notImplementedMsg()" class="btn btn-sm btn-warning">Editar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <nav class="d-flex justify-content-center">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">&lt;&lt;</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">&gt;&gt;</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer
+    class="bg-dark text-white px-4 py-2 text-center w-100 shadow d-flex align-items-center justify-content-center fixed-footer-lg">
+    <p class="m-0">Todos los derechos reservados | UPTA 2022</p>
+  </footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+<!--
+  ## Base de datos
+  - Respaldo de base de datos.
+  - Recuperación de base de datos.
+
+  ## Usuarios
+  - CRU de usuarios.
+-->

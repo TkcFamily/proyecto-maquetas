@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/perfil.css">
+  <title>Perfil - Departamento de Vinculación Social</title>
+</head>
+
+<body class="footer-spacing-lg" data-bs-spy="scroll" data-bs-target="#sidebarTabs">
+  <header class="container-fluid sticky-top">
+    <nav class="navbar navbar-expand-lg bg-light px-lg-3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="./cursos_user.html" class="navbar-brand d-flex align-items-center mb-0 logo-center-sm fw-semibold">
+        <img class="me-3 logo" width="40" height="40" src="../assets/logo-upta.png" alt="Logo de la UPTA">
+        <span class="d-none d-lg-inline">Vinculación Social</span>
+      </a>
+      <div class="d-flex align-items-center nav-right-wrapper">
+        <button class="nav-item btn btn-link">
+          <img width="16" src="../assets/icons/bell-fill.svg">
+        </button>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mx-2" type="button" id="userDropdownBtn" data-bs-toggle="dropdown">
+            <img width="16" height="16" class="mx-1" src="../assets/icons/person-circle.svg">
+          </a>
+          <ul class="dropdown-menu" style="left: -6rem;">
+            <li>
+              <a href="./perfil.html" class="dropdown-item" href="#">
+                <img class="mb-1" width="16" src="../assets/icons/person-fill.svg">
+                Perfil
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a href="../index.html" class="dropdown-item" href="#">
+                <img class="mb-1" width="16" src="../assets/icons/box-arrow-left.svg">
+                Cerrar Sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav text-center">
+          <a href="./cursos_user.html" class="nav-link">Cursos</a>
+          <a href="./eventos_user.html" class="nav-link">Eventos</a>
+          <a href="./clubes_user.html" class="nav-link">Clubes</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid px-lg-5">
+    <div class="row">
+      <div class="d-none d-lg-block col-lg-3">
+        <aside>
+          <nav class="nav flex-column nav-pills" id="sidebarTabs">
+            <a href="#profile" class="nav-link fs-5 m-2">Mi Perfil</a>
+            <a href="#personal" class="nav-link fs-5 m-2">Datos personales</a>
+            <a href="#courses" class="nav-link fs-5 m-2">Mis cursos</a>
+            <a href="#clubs" class="nav-link fs-5 m-2">Mis clubes</a>
+          </nav>
+          <hr>
+        </aside>
+      </div>
+      <div class="col-lg-9 mt-1 border-start">
+        <h1 id="profile" class="mt-2 title scroll-m-top">Mi Perfil</h1>
+        <hr>
+        <div class="row">
+          <div class="col-12 text-center">
+            <img class="rounded-circle mb-2 img-cover" width="200" height="200" src="../assets/sample1.jpg"
+              alt="Foto de perfil" />
+          </div>
+          <section class="col-12">
+            <div class="d-flex justify-content-between border-bottom pb-2">
+              <h2 class="fw-semibold pt-2 mb-0">Luis Alejandro Perez Gonzalez</h2>
+              <button onclick="notImplementedMsg()" class="btn btn-primary align-self-center">
+                <img src="../assets/icons/clipboard-light.svg">
+                <span class="d-none d-sm-inline">Editar</span>
+              </button>
+            </div>
+            <div class="card text-bg-primary mt-3">
+              <div class="card-header">
+                <h4 class="mb-0">Datos de usuario: </h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <h5 class="mb-0 h6 text-muted">Correo Electrónico: </h5>
+                  <h6 class="text-truncate fw-normal">luisg@gmail.com</h6>
+                </li>
+                <li class="list-group-item">
+                  <h5 class="mb-0 h6 text-muted">Nombre de Usuario: </h5>
+                  <h6 class="text-truncate fw-normal">@luis_g</h6>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="col-12">
+            <div id="personal" class="card text-bg-primary mt-3">
+              <div class="card-header">
+                <h4 class="mb-0">Datos personales: </h4>
+              </div>
+              <ul class="list-group personal-grid">
+                <li class="list-group-item rounded-0">
+                  <h5 class="mb-0 h6 text-muted">Nombres: </h5>
+                  <h6 class="text-truncate fw-normal">Luis Alejandro</h6>
+                </li>
+                <li class="list-group-item">
+                  <h5 class="mb-0 h6 text-muted">Apellidos: </h5>
+                  <h6 class="text-truncate fw-normal">Perez Gonzalez</h6>
+                </li>
+                <li class="list-group-item">
+                  <h5 class="mb-0 h6 text-muted">Sexo: </h5>
+                  <h6 class="text-truncate fw-normal">Masculino</h6>
+                </li>
+                <li class="list-group-item">
+                  <h5 class="mb-0 h6 text-muted">Cedula de Identidad: </h5>
+                  <h6 class="text-truncate fw-normal">V-12.345.678</h6>
+                </li>
+                <li class="list-group-item">
+                  <h5 class="mb-0 h6 text-muted">Fecha de Nacimiento: </h5>
+                  <h6 class="text-truncate fw-normal">7 de julio de 2003</h6>
+                </li>
+                <li class="list-group-item">
+                  <h5 class="mb-0 h6 text-muted">Número de Teléfono: </h5>
+                  <h6 class="text-truncate fw-normal">0412-8970019</h6>
+                </li>
+                <li class="list-group-item round-bl">
+                  <h5 class="mb-0 h6 text-muted">Grado de Instrucción: </h5>
+                  <h6 class="text-truncate fw-normal">Bachillerato</h6>
+                </li>
+                <li class="list-group-item round-br">
+                  <h5 class="mb-0 h6 text-muted">Dirección: </h5>
+                  <h6 class="text-truncate fw-normal">Avenida Loreto, La Victoria, Aragua.</h6>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="courses" class="col-12 scroll-m-top">
+            <h2 class="mt-4">Mis cursos</h2>
+            <hr>
+            <div class="courses-grid">
+              <div class="card course-card shadow">
+                <img class="card-img-top" src="../assets/html.png" alt="Imagen del Curso: ">
+                <div class="card-body position-relative">
+                  <h4 class="card-title">Programación Web</h4>
+                  <p class="card-text">Instructor: <span class="fw-semibold">Ing. Jackson Perez</span></p>
+                  <span class="badge course-status bg-success position-absolute">Aprobado</span>
+                  <button class="btn btn-success btn-sm float-right">Certificado</button>
+                  <a href="./detalles_cursos_user.html" class="btn btn-primary btn-sm float-right">Detalles</a>
+                </div>
+              </div>
+              <div class="card course-card shadow">
+                <img class="card-img-top" src="../assets/sample4.jpg" alt="Imagen del Curso: ">
+                <div class="card-body position-relative">
+                  <h4 class="card-title">Diseño Gráfico</h4>
+                  <p class="card-text">Instructor: <span class="fw-semibold">Ing. Elías Vargas</span></p>
+                  <span class="badge course-status bg-danger position-absolute">Reprobado</span>
+                  <a href="./detalles_cursos_user.html" class="btn btn-primary btn-sm float-right">Detalles</a>
+                </div>
+              </div>
+              <div class="card course-card shadow">
+                <img class="card-img-top" src="../assets/excel.jpg" alt="Imagen del Curso: ">
+                <div class="card-body position-relative">
+                  <h4 class="card-title">Reparación de Teléfonos</h4>
+                  <p class="card-text">Instructor: <span class="fw-semibold">Ing. Anyerg Martínez</span></p>
+                  <span class="badge course-status bg-warning position-absolute">Por verificar</span>
+                  <a href="./detalles_cursos_user.html" class="btn btn-primary btn-sm float-right">Detalles</a>
+                </div>
+              </div>
+              <div class="card course-card shadow">
+                <img class="card-img-top" src="../assets/html.png" alt="Imagen del Curso: ">
+                <div class="card-body position-relative">
+                  <h4 class="card-title">Programación Web</h4>
+                  <p class="card-text">Instructor: <span class="fw-semibold">Ing. Jackson Perez</span></p>
+                  <span class="badge border course-status text-bg-light position-absolute">En curso</span>
+                  <a href="./detalles_cursos_user.html" class="btn btn-primary btn-sm float-right">Detalles</a>
+                </div>
+              </div>
+              <div class="card course-card shadow">
+                <img class="card-img-top" src="../assets/sample4.jpg" alt="Imagen del Curso: ">
+                <div class="card-body position-relative">
+                  <h4 class="card-title">Diseño Gráfico</h4>
+                  <p class="card-text">Instructor: <span class="fw-semibold">Ing. Elías Vargas</span></p>
+                  <span class="badge course-status text-bg-dark position-absolute">Inscrito</span>
+                  <a href="./detalles_cursos_user.html" class="btn btn-primary btn-sm float-right">Detalles</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="clubs" class="col-12 scroll-m-top">
+            <h2 class="mt-4">Mis clubes</h2>
+            <hr>
+            <div class="clubs-grid">
+              <div class="card mb-3 shadow club-card">
+                <div class="club-img-container">
+                  <img class="img-cover rounded-start" src="../assets/sample2.jpg" width="200" height="160"
+                    class="rounded-start" alt="Imagen de Club: ">
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Club de Fútbol</h4>
+                  <h6 class="card-subtitle text-muted">Entr. Ignacio Rojas</h6>
+                  <p class="card-text">Martes de 9:00 AM a 10:00 AM</p>
+                  <button onclick="notImplementedMsg()" class="btn btn-primary">Detalles</button>
+                  <button class="btn btn-danger">Retirarse</button>
+                </div>
+              </div>
+              <div class="card mb-3 shadow club-card">
+                <div class="club-img-container">
+                  <img class="img-cover rounded-start" src="../assets/sample1.jpg" width="200" height="160"
+                    class="rounded-start" alt="Imagen de Club: ">
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Club de Fútbol</h4>
+                  <h6 class="card-subtitle text-muted">Entr. Ignacio Rojas</h6>
+                  <p class="card-text">Martes de 9:00 AM a 10:00 AM</p>
+                  <button onclick="notImplementedMsg()" class="btn btn-primary">Detalles</button>
+                  <button class="btn btn-danger">Retirarse</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="bg-dark text-white px-4 py-2 text-center w-100 shadow d-flex align-items-center justify-content-center fixed-footer-lg">
+    <p class="m-0">Todos los derechos reservados | UPTA 2022</p>
+  </footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
